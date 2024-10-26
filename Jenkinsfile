@@ -28,7 +28,7 @@ pipeline{
                    }
                }
             }
-            steps('')
+            steps('deploy')
         }
     }
 }
