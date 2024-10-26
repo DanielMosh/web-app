@@ -32,7 +32,7 @@ pipeline{
             steps{
                 nexusArtifactUploader artifacts: [[artifactId: 'maven-web-application', 
                 classifier: '', 
-                file: '/var/lib/jenkins/workspace/first_pipeline/target/web-app.war', 
+                file: '/var/lib/jenkins/workspace/jenkinsfile_another_try/target/web-app.war', 
                 type: 'war']], 
                 credentialsId: 'usr.name_usr.pass',
                 groupId: 'com.mt', 
