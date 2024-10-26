@@ -17,20 +17,18 @@ pipeline{
             }
         }
         stage('code analysis'){
-            environment {
+                environment {
                 scanner = tool 'sonarq'
             }
-            
             steps{
                 script{
                    withSonarQubeEnv('sonarq'){
                        sh "${scanner}/bin/sonar-scanner -Dsonar.projectKey=dan-try-webapp"
-                   }
-               }
+                      }
+                    }
+                }
             }
-            steps('deploy'){
-                
-            }
+            
         }
     }
 }
