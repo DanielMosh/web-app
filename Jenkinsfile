@@ -28,8 +28,21 @@ pipeline{
                     }
                 }
             }
+        stage('upload to nexus'){
+            steps{
+                nexusArtifactUploader artifacts: [[artifactId: 'maven-web-application', 
+                classifier: '', 
+                file: '/var/lib/jenkins/workspace/first_pipeline/target/web-app.war', 
+                type: 'war']], 
+                credentialsId: 'usr.name_usr.pass',
+                groupId: 'com.mt', 
+                nexusUrl: 'http://35.92.24.113:8081/repository/another-repo/', 
+                nexusVersion: 'nexus3', 
+                protocol: 'http', 
+                repository: 'dan_hosted_webapps', 
+                version: '3.8.1-Release'
+            }
         }
     }
 
 
-    
