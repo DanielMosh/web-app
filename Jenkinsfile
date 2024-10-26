@@ -39,7 +39,7 @@ pipeline{
                 nexusUrl: 'http://35.92.24.113:8081/repository/another-repo/', 
                 nexusVersion: 'nexus3', 
                 protocol: 'http', 
-                repository: 'dan_hosted_webapps', 
+                repository: 'another-repo', 
                 version: '3.8.1-Release'
             }
         }
